@@ -1,0 +1,47 @@
+name:                   evar
+version:                0.1.0.0
+synopsis:               Families of types containing either exception or value.
+description:            TODO
+homepage:               https://github.com/trskop/evar
+bug-reports:            https://github.com/trskop/evar/issues
+license:                BSD3
+license-file:           LICENSE
+author:                 Peter Trško
+maintainer:             peter.trsko@gmail.com
+copyright:              (c) 2015-2016, Peter Trško
+category:               Data
+build-type:             Simple
+cabal-version:          >=1.10
+
+extra-source-files:     ChangeLog.md, README.md
+
+library
+  hs-source-dirs:       src
+  exposed-modules:
+--    Data.EVar
+--  , Data.EVar.Type.EVar
+--  , Data.EVar.Type.EVar_
+      Data.EVar.Type.EVar_
+  -- other-modules:
+
+  default-language:     Haskell2010
+  other-extensions:
+      CPP
+    , DeriveDataTypeable
+    , DeriveFunctor
+    , DeriveGeneric
+    , NoImplicitPrelude
+
+  build-depends:
+      base >=4.7 && <5
+    , between >=0.11
+    , exceptions >=0.4 && <0.9
+
+source-repository head
+  type:                 git
+  location:             git://github.com/trskop/evar.git
+
+--source-repository this
+--  type:                 git
+--  location:             git://github.com/trskop/evar.git
+--  tag:                  0.1.0.0
